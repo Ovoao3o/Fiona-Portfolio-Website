@@ -1,0 +1,1040 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&display=swap');
+ 
+ /* Global Styles */
+ body {
+    margin: 0;
+    padding: 0;
+}
+ 
+  
+  /* Navigation Bar */
+#nav {
+    position: fixed;    
+    top: 0;             
+    left: 0;          
+    width: 100%;      
+    z-index: 999;       
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#site-title {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    letter-spacing: 0.06em;
+    margin-left: 1.25rem;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Newsreader", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+    margin-right: 4.06rem;
+    margin-left: 0.625rem;
+}
+
+#nav li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown container */
+#nav ul li.dropdown {
+    position: relative;
+}
+
+  
+/* Dropdown-content*/
+#nav ul li.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 300px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    margin-left: 200px;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+}
+  
+/* Dropdown menu on hover */
+#nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+
+/* Dropdown content style */
+#nav ul li.dropdown .dropdown-content li a {
+    color: #000;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    font-family: "Newsreader", serif; 
+    font-size: 0.95rem;
+    text-align: right;
+    margin-right: 50px;
+}
+  
+/* Hover effect on dropdown content */
+#nav ul li.dropdown .dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+}
+  
+
+
+
+/*Home Page*/
+.Hero-Section {
+    margin-top: 40px;
+    padding: 0px 40px;
+    padding-top: 90px;
+
+}
+
+.Hero-Section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main Welcome Section */
+.Hero-Section h1 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin-top: 2.5rem;
+    font-size: 4.5rem;
+}
+  
+.Hero-Section p {
+    font-family: "Newsreader", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-align: auto;
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin-top: 1rem;
+}
+    
+/* Projects Section */
+ #projects {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+      
+#projects h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: 2.8rem;
+    letter-spacing: 0.06em;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+      
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+      
+.project-card {
+    text-align: left;
+}
+      
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+      
+.project-card h3 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.09rem;
+    margin-bottom: 0.3rem;
+}
+      
+.project-card p {
+    font-size: 0.9rem;
+    color: #444;
+}
+      
+.view-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+      
+.view-button:hover {
+    background-color: black;
+    color: white;
+}
+      
+/* About Me Section */
+.about-me {
+    position: relative;
+    color: black;
+    padding: 100px 30px;
+    overflow: hidden;
+}
+  
+/* Scrolling ABOUT ME Title */
+.scrolling-title {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 9rem;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    animation: scrollText 30s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+  
+@keyframes scrollText {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+  
+  /* Foreground Content */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+  
+.aboutme-image img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin-left: 250px;
+    box-shadow: 20px 20px 9px rgba(0,0,0,0.2);
+    float: left;
+
+}
+  
+.about-text {
+    max-width: 500px;
+    font-family: "Newsreader", serif;
+    margin-right: 250px;
+}
+  
+.about-text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+  
+.about-text .view-button {
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 0.95rem;
+    margin-left: 150px; 
+}
+  
+.about-text .view-button:hover {
+    background-color: gray;
+}
+  
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    font-family: "Georgia", serif;
+    padding: 3rem 3rem 0rem 3rem;
+}
+  
+  /* Top Row: Left/Right Columns */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.footer-top p {
+    margin: 0;
+    line-height: 1.6;
+}
+  
+  
+.top-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+  
+.top-right ul li {
+    margin-bottom: 1rem;
+}
+  
+.top-right ul li a {
+    color: white;
+    text-decoration: underline;
+    text-align: right;
+}
+  
+  
+/* Bottom Row */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.bottom-left h1 {
+    font-family: "Instrument Serif", serif;
+    margin: 0;
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+  
+.bottom-right .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 50px;
+}
+  
+.bottom-right .social-icons a {
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.bottom-right .social-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+
+/* Category Page */
+.hero-category img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category-info {
+    padding: 10px 60px 60px 60px;
+    background-color: black;
+    color: white;
+}
+  
+
+.category-info h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    margin-bottom: 50px;
+}
+  
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: "Newsreader", serif;
+}
+  
+.left-info {
+    flex: 1.5;
+    min-width: 100px;
+}
+  
+.left-info .category,
+.left-info .year {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+  
+.right-description {
+    flex: 2;
+    min-width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+  
+
+
+/*Category Page - Landscappes*/
+.slideshow-section {
+    padding: 60px;
+    background-color: white;
+    color: black;
+}
+  
+.slideshow-section h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+  
+.slideshow-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+  
+.slideshow-track {
+    display: flex;
+    gap: 140px;
+}
+  
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 300px;
+    text-align: center;
+}
+  
+.slide img {
+    width: 140%;
+    height: auto;
+}
+  
+.slide p {
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: left;
+}
+  
+  
+/* Masonry Gallery */
+.masonry-gallery {
+    background-color: black;
+    color: white;
+    padding: 30px 30px;
+}
+  
+  /* Masonry Grid Layout */
+.masonry-grid {
+    column-count: 4;
+    column-gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(19, 19, 19);
+}
+
+.masonry-grid img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* heading above the grid */
+.masonry-gallery .gallery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.masonry-gallery .gallery-header h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+.masonry-gallery .gallery-header p {
+    color: #ccc;
+    font-size: 1rem;
+    font-family: "Newsreader", serif;
+    margin: 0.5rem 0 0;
+}
+  
+
+
+
+/* Category Page - Conceptual */
+.emotional-text-section {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    font-family: "Instrument Serif", serif;
+  }
+  
+.emotional-text-section h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+  
+.emotional-text-section p {
+    font-size: 1.2rem;
+    font-family: "Newsreader", serif;
+    margin: 8px 0;
+}
+  
+.emotional-image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+  
+.emotional-image-row img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+  
+
+/*Video Section*/
+.serenity-section {
+    background-color: #e6e6e6;
+    font-family: "Instrument Serif", serif;
+    color: black;
+}
+  
+.serenity-heading-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+  
+.serenity-heading{
+    font-size: 8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-family: "Instrument Serif", serif;
+    color: black;
+    left: 0;
+    animation: scrollText 30s linear infinite;
+    margin-top: 40px;
+}
+
+.serenity-content {
+    padding: 0px 70px 100px 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+}
+  
+.serenity-left {
+    flex: 1.5;
+    min-width: 300px;
+}
+  
+.serenity-left h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+  
+.serenity-left p {
+    font-family: "Newsreader", serif;
+    font-size: 1.rem;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+  
+.serenity-right {
+    flex: 1;
+    min-width: 300px;
+}
+  
+.serenity-video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+}
+  
+
+
+/* Documentary Section */
+/* Section padding */
+.documentary-section {
+    padding: 4rem 1rem;
+  }
+  
+  /* Card container */
+  .media-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 2rem;
+  }
+  
+  /* Header styling */
+  .media-header {
+    text-align: center;
+  }
+  
+  .media-header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: #000;
+    position: relative;
+  }
+  
+  /* Decorative underline */
+  .media-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #ccc, #444);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Optional subtitle (blockquote) */
+  .media-header blockquote {
+    margin: 1rem auto 0;
+    font-style: italic;
+    color: #555;
+    max-width: 600px;
+  }
+  
+  /* Center & size the player */
+  .media-player-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .media-player {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Description styling */
+  .media-description p {
+    margin: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Responsive tweak */
+  @media (min-width: 768px) {
+    .media-card {
+      padding: 3rem;
+    }
+    .media-header h2 {
+      font-size: 3rem;
+    }
+  }
+  
+
+
+
+
+
+  /* Collection page */
+.hero-collection {
+    position: relative; 
+    width: 100%;
+    overflow: hidden;
+}
+  
+.hero-collection img {
+    width: 100%;
+}
+  
+/* Centered Heading */
+ .hero-heading {
+    font-family: "Instrument Serif", serif;
+    position: absolute;
+    top: 40%; 
+    left: 30%;
+    color: #fff;
+    font-size: 6rem;     
+    z-index: 2;     
+    text-align: center;
+}
+  
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+Code inspired by: https://www.w3schools.com/howto/howto_css_image_overlay.asp
+Author: W3Schools
+Name: Image Overlay on Hover
+Description: Used for heading + overlay interaction in hero section
+Date retrieved: April 6, 2025
+*/
+
+/* Hover the heading */
+.hero-heading:hover ~ .hero-overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+  
+.collection-description {
+    background-color: #fff;
+    color: #000;
+    padding: 130px 20px 130px 20px;
+    text-align: center;
+}
+  
+.collection-description p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+
+
+  
+
+
+
+/* About Me Page */
+.about-me {
+    padding: 120px 20px 60px;
+    background: linear-gradient(to bottom, #fff, #f7f7f7);
+}
+  
+.about-container {
+    max-width: 1100px;
+    margin: 110px auto;
+    display: flex;
+    gap: 40px;
+}
+  
+.about-image {
+    width: 450px;
+    height: auto;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.aboutme-text {
+    margin-left: 90px;
+    margin-top: 50px;
+}
+
+.aboutme-text h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+.aboutme-text p {
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+  
+
+/*Personal Identity*/
+
+.identity-section {
+    background-color: #f4f4f4;
+    padding: 100px 20px;
+}
+  
+.identity-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+  
+.identity-container h1 {
+    font-family: "Instrument Serif", serif;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+}
+  
+.identity-container p {
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+    line-height: 1.8em;
+}
+  
+
+/* Work Experience */
+.experience-section {
+    padding: 100px 20px 0px;
+    background-color: #fff;
+}
+
+.experience-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    letter-spacing: 0.06em;
+}
+
+.experience-container h1 {
+    text-align: center;
+    font-family: "Instrument Serif", serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+    letter-spacing: 0.06em;
+}
+
+.job-entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    line-height: 1.5em;
+}
+
+.job-left {
+    flex: 1.1;
+}
+  
+.job-left h1 {
+    font-family: "Instrument Serif", serif;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+
+}
+
+.job-left p {
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+}
+
+.job-right {
+    flex: 1.5;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+}
+
+.job-right ul {
+    text-align: left;
+}
+
+.location, .date {
+    text-align: right;
+}
+
+
+/* Additional Info Section */
+.additional-info {
+    padding: 100px 20px;
+    text-align: center;
+    font-family: "Newsreader", serif;
+    background-color: #f4f4f4;
+}
+  
+.additional-info h1 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    letter-spacing: 0.06em;
+}
+  
+  .info-columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info-block {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.info-block h1 {
+  font-family: "Instrument Serif", serif;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.info-block p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.8em;
+}
+
+.info-block strong {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+/* Contact Page - Social Icons */
+.social-icons-below {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem 3rem 0.5rem 0;
+    position: relative;
+    top: 180px;
+}
+  
+.social-icons-below a {
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+  
+.social-icons-below a:hover {
+    color: gray;
+}
+
+/* Contact Page */
+.contact-container {
+    margin: 150px;
+    padding: 2rem;
+    text-align: center;
+    font-family: "Newsreader", serif;
+}
+  
+.contact-container h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+  
+.contact-info {
+    margin: 50px;
+    font-size: 1rem;
+    line-height: 1.8em;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+  
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+  
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+  
+.contact-form span {
+    font-weight: normal;
+    font-size: 1rem;
+    color: gray;
+}
+  
+.name-fields {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+  
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+  
+.contact-form button:hover {
+    background-color: #444;
+}
+  
+
