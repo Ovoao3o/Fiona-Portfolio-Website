@@ -1036,5 +1036,41 @@ Date retrieved: April 6, 2025
 .contact-form button:hover {
     background-color: #444;
 }
+
+
+/* Base container for all screens */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
   
+  /* Between 1280px and 1024px – reduce columns */
+  @media (max-width: 1280px) {
+    .project-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  
+  /* Tablets / small desktops */
+  @media (max-width: 1024px) {
+    .project-grid { grid-template-columns: repeat(2, 1fr); }
+    .masonry-grid { column-count: 2; }
+  }
+  
+  /* Phones in landscape */
+  @media (max-width: 768px) {
+    .project-grid,
+    .masonry-grid { grid-template-columns: 1fr; column-count: 1; }
+    .slideshow-container { overflow-x: auto; scroll-snap-type: x mandatory; }
+    .slide { flex: 0 0 80%; scroll-snap-align: start; }
+  }
+  
+  /* Small phones in portrait */
+  @media (max-width: 576px) {
+    nav ul { flex-direction: column; }
+    nav a { padding: 0.5rem; font-size: 0.9rem; }
+  }
+  
+  
+
+
 
